@@ -8,7 +8,7 @@ namespace FishMonitoringConsole
     {
         public static string ShowTable(string temp, int maxTemp, Dictionary<DateTime, double> dtList)
         {
-            string result = "     Время\t  Факт\tНорма\tОтклонение от нормы" + Environment.NewLine;
+            string result = "<span style=\"margin-left: 25px;\">Время</span><span style=\"margin-left: 65px;\">Факт</span><span style=\"margin-left: 35px;\">Норма</span><span style=\"margin-left: 30px;\">Отклонение от нормы</span><br>";
             List<int> tempData = ArrayStrToInt(temp.Split(", "));
             List<string> timeList = new List<string>();
 
@@ -20,8 +20,8 @@ namespace FishMonitoringConsole
             for (int i = 0; i < tempData.Count; i++)
             {
                 if (tempData[i] > maxTemp)
-                    result += $"{timeList[i]}\t   {tempData[i]}\t " + $"{maxTemp}\t\t" + 
-                        (maxTemp-tempData[i]) + Environment.NewLine;
+                    result += $"<span>{timeList[i]}</span><span style=\"margin-left: 50px;\">{tempData[i]}</span>" + $"<span style=\"margin-left: 50px;\">{maxTemp}</span>" + 
+                        $"<span style=\"margin-left: 120px;\">{tempData[i]-maxTemp}<span>" + "<br>";
             }
             
             return result;
