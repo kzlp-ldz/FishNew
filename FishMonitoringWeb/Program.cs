@@ -21,14 +21,14 @@ namespace FishMonitoringWeb
                     {
                         if (line == "                <!--comment-->") {
 
-                            string connStr = "server=10.0.4.74;user=name;database=fishSchem;port=3306;password=password";
+                            string connStr = "server=10.0.4.145;user=Vlad;database=Fish;port=3306;password=12345678";
 
                             MySqlConnection conn = new MySqlConnection(connStr);
                             try
                             {
                                 conn.Open();
 
-                                string sql = "SELECT * FROM fishSchem.fishTable";
+                                string sql = "SELECT * FROM sys.FishType";
                                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                                 MySqlDataReader res = cmd.ExecuteReader();
 

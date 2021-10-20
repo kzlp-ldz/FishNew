@@ -18,7 +18,7 @@ namespace FishMonitoringConsole
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM Fish.FishType";
+                string sql = "SELECT * FROM sys.FishType";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader res = cmd.ExecuteReader();
 
