@@ -10,7 +10,7 @@ namespace HtmlFormHandle
         static void Main(string[] args)
         {
             Console.WriteLine("Content-Type: text/html \n\n");
-            string path = @"/home/name/style.html";
+            string path = @"/home/kamilya/style.html";
 
             try
             {

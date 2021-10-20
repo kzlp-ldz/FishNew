@@ -9,7 +9,7 @@ namespace FishMonitoringWeb
     {
         static void Main(string[] args)
         {
-            string path = @"/home/name/form.html";
+            string path = @"/home/kamilya/form.html";
 
             try
             {
@@ -21,7 +21,7 @@ namespace FishMonitoringWeb
                     {
                         if (line == "                <!--comment-->") {
 
-                            string connStr = "server=10.0.4.145;user=Vlad;database=Fish;port=3306;password=12345678";
+                            string connStr = "server=10.0.4.145;user=Vlad;database=sys;port=3306;password=12345678";
 
                             MySqlConnection conn = new MySqlConnection(connStr);
                             try
